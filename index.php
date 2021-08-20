@@ -8,7 +8,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Hello world!</title>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js"integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="crossorigin="anonymous"></script>
   
@@ -28,14 +28,12 @@
         //alert("Hello ");
         
         let url = "https://api.thingspeak.com/channels/1458765/feeds.json?results=1 "
+
         $.get(url)
         .done(function(data){
-          let f = data.feeds;
-          console.log(f[1]);
-          console.log(feeds[1].filed1);
-
+          console.log(data);
+          console.log(data.channel);
         })
-
         .fail(function(erroe){
 
         });
