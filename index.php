@@ -26,15 +26,19 @@
 
     $(()=>{
         //alert("Hello ");
+        
         let url = "https://api.thingspeak.com/channels/1458765/feeds.json?results=1 "
         $.get(url)
         .done(function(data){
+          let f = data.feeds;
+          console.log(f[1]);
+          console.log(feeds[1].filed1);
 
         })
-        
+
         .fail(function(erroe){
 
-        })
+        });
     });
 
 </script>
